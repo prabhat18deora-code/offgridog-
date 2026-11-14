@@ -1,0 +1,6 @@
+{
+  "name": "OffGrid OG - Contemporary Fashion & Essentials",
+  "description": "Minimalist streetwear, smart casual clothing, and everyday uniforms for young adults in India. Outside the ordinary. Beyond the grid.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

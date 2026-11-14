@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #343B2B;
+  --color-charcoal: #505840;
+  --color-ivory: #F2EFE7;
+  --color-sand: #D0C8B7;
+  --color-olive: #777B5A;
+  --color-earth: #796653;
+  --color-stone: #D0C8B7;
+  --color-border-grey: #62694F;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #343B2B;
+    --bg-secondary: #414936;
+    --bg-card: #505840;
+    --text-primary: #F2EFE7;
+    --text-muted: #D0C8B7;
+    --accent-olive: #777B5A;
+    --accent-earth: #796653;
+    --bg-dark: #292F23;
+    --border-color: #62694F;
+    --white: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+}
+
+/* Custom Brand Typography & Utility classes */
+.font-brand-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-editorial {
+  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Tabular numerals for prices, quantities, dates */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth transitions */
+.transition-luxury {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101110;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353630;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777B5A;
+}
+
+/* Moody Urban Campaign - Slow Cinematic Zoom */
+@keyframes cinematicZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-cinematic-zoom {
+  animation: cinematicZoom 10s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cinematic-zoom {
+    animation: none !important;
+  }
+}
+
+/* Custom Desktop Cursor Rules */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled * {
+    cursor: none !important;
+  }
+
+  body.custom-cursor-enabled input[type="text"],
+  body.custom-cursor-enabled input[type="email"],
+  body.custom-cursor-enabled input[type="password"],
+  body.custom-cursor-enabled input[type="search"],
+  body.custom-cursor-enabled textarea {
+    cursor: text !important;
+  }
+}
+
